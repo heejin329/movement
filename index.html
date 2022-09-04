@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1450">
+    <title>Movement</title>
+
+        <!--2. 연결 시켜야 할 파일을 연결 시킨다. 복사해서 head안에 본인 css파일 위에 위치 시킨다.-->
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+    <!--애니메이션-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <!--내가 만든 css파일-->
+     <link rel="stylesheet" href="css/main.css">
+     <link rel="shortcut icon" href="#" type="image/x-icon">
+    <!--제이쿼리 라이브러리파일-->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <!--내가 만든 js파일-->
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div id="header_inner">
+            <h1><a href="#"><img src="img/logo.png" alt="무브먼트탑로고"></a></h1>
+            <ul class="gnb">
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">ARTIST</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">TICKET</a></li>
+            </ul><!--gnb--> 
+        </div><!--header_inner-->
+    </div><!--header-->
+    <div id="mb">
+        <video  autoplay loop muted playsinline>
+            <source src="img/mainvideo.mp4">
+        </video>
+    </div><!--mb-->
+    <div id="ticket">
+        <div id="ticket_inner">
+            <h2 class="sub_title">GET YOUR TICKET!</h2>
+            <h3 class="sub_text">Movement의 공연·문화 프로그램에 초대합니다</h3>
+            <div class="box"><!--position-->
+                <div class="ticket1 hover" data-aos="fade-right" data-aos-duration="800">
+                    <img src="img/concert1.jpg" alt="공연1">
+                    <div class="hover_box">
+                        <div class="tb">
+                            <h4>고영열의 풍류풍류</h4>
+                            <p>
+                                2022.09.09 Fri 8PM<br>
+                                서울돈화문국악당
+                            </p>
+                            <a href="#" class="btn1">예매하기</a>
+                        </div><!--tb-->
+                    </div><!--hover_box-->
+                </div><!--ticket1-->
+                <div class="ticket2 hover" data-aos="fade" data-aos-duration="600">
+                    <img src="img/concert2.jpg" alt="공연1">
+                    <div class="hover_box">
+                        <div class="tb">
+                            <h4>무브먼트 오케스트라 제 3회 정기연주회</h4>
+                            <p>
+                                2022.09.03 Sat 5PM<br>
+                                금호아트홀
+                            </p>
+                            <a href="#" class="btn1">예매하기</a>
+                        </div><!--tb-->
+                    </div><!--hover_box-->
+                </div><!--ticket2-->
+                <div class="ticket3 hover" data-aos="fade-left" data-aos-duration="800">
+                    <img src="img/concert3.jpg" alt="공연3">
+                    <div class="hover_box">
+                        <div class="tb">
+                            <h4>박준영 피아노 리사이틀</h4>
+                            <p>
+                                2022.09.18 Sun 5PM<br>
+                                예술의전당
+                            </p>
+                            <a href="#" class="btn1">예매하기</a>
+                        </div><!--tb-->
+                    </div><!--hover_box-->
+                </div><!--ticket3-->
+                <div class="ticket4 hover" data-aos="fade-up-right" data-aos-duration="500">
+                    <img src="img/concert4.jpg" alt="공연4">
+                    <div class="hover_box">
+                        <div class="tb">
+                            <h4>레떼아모르 단독 콘서트 &lt;Nothing better&gt; </h4>
+                            <p>
+                                2022.10.22 Sat 6PM<br>
+                                연세대 백주년 기념관 콘서트홀
+                            </p>
+                            <a href="#" class="btn1">예매하기</a>
+                        </div><!--tb-->
+                    </div><!--hover_box-->
+                </div><!--ticket4-->
+                <div class="ticket5 hover" data-aos="fade-up-left" data-aos-duration="500">
+                    <img src="img/concert5.jpg" alt="공연5">
+                    <div class="hover_box">
+                        <div class="tb">
+                            <h4>골든스윙밴드 재즈 콘서트 &lt;Cheek To Cheek&gt;</h4>
+                            <p>
+                                2022.09.24 Sat 7PM<br>
+                                세종문화회관 S 씨어터
+                            </p>
+                            <a href="#" class="btn1">예매하기</a>
+                        </div><!--tb-->
+                    </div><!--hover_box-->
+                </div><!--ticket5-->
+            </div><!--box-->
+        </div><!--ticket_inner-->
+    </div><!--ticket-->
+    <div id="album">
+        <div id="album_inner">
+            <h2 class="sub_title">MOVEMENT'S PICK</h2>
+            <h3 class="sub_text">지금 가장 주목받는 앨범을 소개합니다</h3>
+            <div id="genre"><!--이 박스는 제이쿼리에서 쓰이지 않으므로, 이름 변경해서 사용하세요~-->	
+                <!--탭 메뉴 영역 -->
+                <ul class="tabs">
+                    <li><a href="#tab1" class="tab_btn">CLASSIC</a></li>
+                    <li><a href="#tab2" class="tab_btn">CROSSOVER</a></li>
+                </ul>
+            
+                <!--탭 콘텐츠 영역 -->
+                <div class="tab_container" data-aos="fade" data-aos-duration="800">
+                    <div id="tab1" class="tab_content">
+                        <!--Content-->
+                      <h1><img src="img/album2.jpg" alt="앨범1"></h1>
+                      <h2><img src="img/cd2.png" alt="cd1"></h2>
+                      <div class="g_text">
+                        <h3>Love Signal</h3>
+                        <h4>레이어스 클래식 / 2022. 04. 13 </h4>
+                        <p>
+                            레이어스 클래식의 정규 2집 앨범 <br>
+                            아련한 첫사랑, 가슴 저린 이별, 그리고 사랑과 전쟁! <br>       
+                            사랑의 다양한 감정을 모티브로 하여 <br>
+                            클래식 명곡을 조화롭게 매시업한 앨범
+                        </p>    
+                      </div><!--g_text-->                      
+                      </div><!--tab_text-->
+                    </div><!--tab1-->
+                    <div id="tab2" class="tab_content">
+                        <!--Content-->
+                      <h1><img src="img/album3.jpg" alt="앨범2"></h1>
+                      <h2><img src="img/cd3.png" alt="cd2"></h2>
+                      <div class="g_text">
+                        <h3>The Man I Love</h3>
+                        <h4>임선혜 / 2022. 06. 13</h4>
+                        <p>
+                          소프라노 임선혜의 크로스오버 앨범 <br>
+                          작곡가 번스타인과 거슈윈 레퍼토리를 중심으로 <br>
+                          노래한 뮤지컬 앨범
+                        </p>
+                      </div><!--g_text-->                      
+                      </div><!--tab_text-->
+                    </div><!--tab2-->
+                </div><!--tab_container-->  
+            </div><!--genre-->        
+        </div><!--album_inner-->
+    </div><!--album-->
+    <div id="best">
+        <div id="best_inner">
+            <h2 class="sub_title">BEST ALBUM</h2>
+            <h3 class="sub_text">지금 가장 인기있는 음반을 만나보세요</h3>
+            <ul class="b_list" data-aos="fade-up" data-aos-easing="ease-out-back" data-aos-duration="1000">
+                <li>
+                    <h4><img src="img/best1.jpg" alt="베스트음반1"></h4>
+                    <p>
+                        <span>The fourth power of four</span> <br>
+                        라비던스(RabidAnce)
+                    </p>
+                    <a href="#" class="btn2">구매하기</a>
+                </li>
+                <li>
+                    <h4><img src="img/best2.jpg" alt="베스트음반2"></h4>
+                    <p>
+                        <span>Chopin: Piano Concerto No.2 · Scherzi</span> <br>
+                        조성진
+                    </p>
+                    <a href="#" class="btn2">구매하기</a>
+                </li>
+                <li>
+                    <h4><img src="img/best3.jpg" alt="베스트음반3"></h4>
+                    <p>
+                        <span>Il mondo</span> <br>
+                        유채훈
+                    </p>
+                    <a href="#" class="btn2">구매하기</a>
+                </li>
+            </ul><!--b_list-->
+        </div><!--best_inner-->
+    </div><!--best-->
+    <!--1. 구조와 class의 이름을 알맞게 넣어준다.-->
+    <div class="swiper artist"><!--swiper는 필수 클래스, 그 옆의 클래스는 보조 클래스-->
+        <div class="swiper-wrapper"><!--swiper-wrapper는 필수 클래스-->
+            <div class="swiper-slide">
+                <!--swiper-slide는 필수 클래스-->
+                <img src="img/artist1.jpg" alt="아티스트1">
+            </div>
+            <div class="swiper-slide">
+                <!--swiper-slide는 필수 클래스-->
+                <img src="img/artist2.jpg" alt="아티스트2">
+            </div>
+            <div class="swiper-slide">
+                <!--swiper-slide는 필수 클래스-->
+                <img src="img/artist3.jpg" alt="아티스트3">
+            </div>
+        </div>
+        <!--화살표추가-->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div><!--artist-->
+    <div id="footer">
+        <div id="footer_inner">
+            <div class="copyright">
+                <h1><a href="#mb"><img src="img/f_logo.png" alt="무브먼트푸터로고"></a></h1>
+                <p>
+                    서울특별시 종로구 세종대로 410 7층 무브먼트 <br>
+                    movement@gmail.com
+                </p>
+                <h5>
+                    ⓒ Movement all rights reserved. designed & managed by Jungheejin
+                </h5>
+            </div><!--copyright-->
+            <ul class="sns">
+                <li><a href="#"><img src="img/sns1.png" alt="sns1"></a></li>
+                <li><a href="#"><img src="img/sns2.png" alt="sns2"></a></li>
+                <li><a href="#"><img src="img/sns3.png" alt="sns3"></a></li>
+                <li><a href="#"><img src="img/sns4.png" alt="sns4"></a></li>
+            </ul><!--sns-->
+        </div><!--footer_inner-->
+    </div><!--footer-->
+
+
+    <script>
+        AOS.init();
+        </script>
+        <!--3. 필수 옵션을 넣는 script부분을 body가장 끝에 넣어준다.-->
+		<!-- Initialize Swiper --><!--옵션부분 pdf파일 참조해주세요-->
+		<script>
+            var swiper = new Swiper(".artist", {
+              navigation: {
+                   nextEl: ".swiper-button-next",
+                   prevEl: ".swiper-button-prev",
+                  },//화살표를 작동하게 하는 옵션.
+                loop: true,
+            });
+          
+          </script>
+</body>
+</html>
